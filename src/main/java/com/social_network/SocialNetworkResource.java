@@ -54,7 +54,7 @@ public class SocialNetworkResource {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     @Path("/user/suggested_friends/{id}")
-    public List<User> getSuggestedFriends(int id) throws SQLException{
+    public List<User> getSuggestedFriends(@PathParam("id") int id) throws SQLException{
     	return service.getSuggestedFriends(id);
     }
     
